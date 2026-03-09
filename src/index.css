@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 98%;
+    --foreground: 160 30% 10%;
+
+    --card: 40 25% 96%;
+    --card-foreground: 160 30% 10%;
+
+    --popover: 40 33% 98%;
+    --popover-foreground: 160 30% 10%;
+
+    --primary: 168 55% 32%;
+    --primary-foreground: 40 33% 98%;
+
+    --secondary: 40 30% 92%;
+    --secondary-foreground: 160 30% 15%;
+
+    --muted: 40 20% 94%;
+    --muted-foreground: 160 10% 45%;
+
+    --accent: 38 80% 55%;
+    --accent-foreground: 160 30% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 168 55% 32%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'DM Sans', sans-serif;
+
+    --shadow-soft: 0 4px 24px -4px hsl(168 55% 32% / 0.08);
+    --shadow-card: 0 8px 32px -8px hsl(168 55% 32% / 0.1);
+    --shadow-hover: 0 16px 48px -12px hsl(168 55% 32% / 0.15);
+  }
+
+  .dark {
+    --background: 160 30% 6%;
+    --foreground: 40 33% 95%;
+    --card: 160 25% 10%;
+    --card-foreground: 40 33% 95%;
+    --popover: 160 30% 6%;
+    --popover-foreground: 40 33% 95%;
+    --primary: 168 55% 45%;
+    --primary-foreground: 160 30% 6%;
+    --secondary: 160 20% 15%;
+    --secondary-foreground: 40 33% 95%;
+    --muted: 160 15% 15%;
+    --muted-foreground: 40 10% 60%;
+    --accent: 38 80% 55%;
+    --accent-foreground: 160 30% 6%;
+    --border: 160 15% 18%;
+    --input: 160 15% 18%;
+    --ring: 168 55% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-6 py-20 md:px-12 lg:px-24 lg:py-28;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-sm border border-border rounded-xl;
+    box-shadow: var(--shadow-card);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
