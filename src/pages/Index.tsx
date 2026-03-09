@@ -5,12 +5,6 @@ import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 import heroImage from "@/assets/hero-clean.jpg";
 
-const stats = [
-  { value: "200+", label: "Happy Clients" },
-  { value: "500+", label: "Spaces Cleaned" },
-  { value: "100%", label: "Satisfaction" },
-  { value: "24/7", label: "Support" },
-];
 
 const services = [
   {
@@ -101,36 +95,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="bg-primary">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, i) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="text-center"
-              >
-                <div className="font-display text-3xl md:text-4xl font-bold text-primary-foreground">
-                  {stat.value}
-                </div>
-                <div className="text-primary-foreground/70 font-body text-sm mt-1">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Preview */}
-      <section className="section-padding bg-background">
+      {/* Services Preview - Alternating Sections */}
+      <section className="bg-background">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection>
-            <div className="text-center mb-16">
+            <div className="text-center section-padding pb-0">
               <span className="text-primary font-body font-semibold text-sm tracking-wider uppercase">
                 What We Offer
               </span>
@@ -142,27 +111,36 @@ const Index = () => {
               </p>
             </div>
           </AnimatedSection>
+        </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {services.map((service, i) => (
-              <AnimatedSection key={service.title} delay={i * 0.15}>
-                <div className="glass-card p-8 hover-lift h-full">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-5">
-                    <service.icon className="w-6 h-6 text-primary" />
+        {services.map((service, i) => (
+          <div
+            key={service.title}
+            className={i % 2 === 0 ? "bg-background" : "bg-secondary"}
+          >
+            <div className="max-w-7xl mx-auto px-6 py-16 md:px-12 lg:px-24">
+              <AnimatedSection delay={0.1}>
+                <div className={`flex flex-col md:flex-row items-center gap-10 ${i % 2 !== 0 ? "md:flex-row-reverse" : ""}`}>
+                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center shrink-0">
+                    <service.icon className="w-8 h-8 text-primary" />
                   </div>
-                  <h3 className="font-display text-xl font-semibold text-foreground mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-muted-foreground font-body text-sm leading-relaxed">
-                    {service.desc}
-                  </p>
+                  <div>
+                    <h3 className="font-display text-2xl font-semibold text-foreground mb-3">
+                      {service.title}
+                    </h3>
+                    <p className="text-muted-foreground font-body leading-relaxed max-w-lg">
+                      {service.desc}
+                    </p>
+                  </div>
                 </div>
               </AnimatedSection>
-            ))}
+            </div>
           </div>
+        ))}
 
-          <AnimatedSection delay={0.3}>
-            <div className="text-center mt-12">
+        <div className="bg-background">
+          <AnimatedSection delay={0.2}>
+            <div className="text-center py-12">
               <Link
                 to="/services"
                 className="inline-flex items-center gap-2 text-primary font-semibold font-body hover:gap-3 transition-all"
@@ -202,9 +180,12 @@ const Index = () => {
             </AnimatedSection>
 
             <AnimatedSection delay={0.2}>
-              <div className="grid grid-cols-2 gap-4">
-                {testimonials.slice(0, 2).map((t) => (
-                  <div key={t.name} className="glass-card p-6">
+              <div className="space-y-6">
+                {testimonials.map((t, i) => (
+                  <div
+                    key={t.name}
+                    className={`py-6 ${i < testimonials.length - 1 ? "border-b border-border" : ""}`}
+                  >
                     <div className="flex gap-1 mb-3">
                       {Array.from({ length: t.rating }).map((_, j) => (
                         <Star key={j} className="w-4 h-4 fill-accent text-accent" />
@@ -218,19 +199,6 @@ const Index = () => {
                     </span>
                   </div>
                 ))}
-                <div className="col-span-2 glass-card p-6">
-                  <div className="flex gap-1 mb-3">
-                    {Array.from({ length: testimonials[2].rating }).map((_, j) => (
-                      <Star key={j} className="w-4 h-4 fill-accent text-accent" />
-                    ))}
-                  </div>
-                  <p className="text-muted-foreground font-body text-sm leading-relaxed mb-3">
-                    "{testimonials[2].text}"
-                  </p>
-                  <span className="text-foreground font-body font-semibold text-sm">
-                    — {testimonials[2].name}
-                  </span>
-                </div>
               </div>
             </AnimatedSection>
           </div>

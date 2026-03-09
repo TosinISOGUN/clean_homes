@@ -64,35 +64,40 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="section-padding bg-background">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, i) => (
-              <AnimatedSection key={service.title} delay={i * 0.1}>
-                <div className="glass-card p-8 hover-lift h-full flex flex-col">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-5">
-                    <service.icon className="w-6 h-6 text-primary" />
+      {/* Services - Alternating Sections */}
+      <section>
+        {services.map((service, i) => (
+          <div
+            key={service.title}
+            className={i % 2 === 0 ? "bg-background" : "bg-secondary"}
+          >
+            <div className="max-w-7xl mx-auto px-6 py-16 md:px-12 lg:px-24 lg:py-20">
+              <AnimatedSection delay={0.1}>
+                <div className={`flex flex-col md:flex-row items-start gap-10 ${i % 2 !== 0 ? "md:flex-row-reverse" : ""}`}>
+                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center shrink-0">
+                    <service.icon className="w-8 h-8 text-primary" />
                   </div>
-                  <h3 className="font-display text-xl font-semibold text-foreground mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-muted-foreground font-body text-sm leading-relaxed mb-5">
-                    {service.desc}
-                  </p>
-                  <ul className="space-y-2 mt-auto">
-                    {service.features.map((f) => (
-                      <li key={f} className="flex items-center gap-2 text-sm font-body text-foreground">
-                        <div className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
-                        {f}
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="flex-1">
+                    <h3 className="font-display text-2xl font-semibold text-foreground mb-3">
+                      {service.title}
+                    </h3>
+                    <p className="text-muted-foreground font-body leading-relaxed mb-6 max-w-lg">
+                      {service.desc}
+                    </p>
+                    <ul className="grid sm:grid-cols-2 gap-3">
+                      {service.features.map((f) => (
+                        <li key={f} className="flex items-center gap-2 text-sm font-body text-foreground">
+                          <div className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+                          {f}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </AnimatedSection>
-            ))}
+            </div>
           </div>
-        </div>
+        ))}
       </section>
 
       {/* CTA */}
