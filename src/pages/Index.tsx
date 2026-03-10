@@ -220,7 +220,7 @@ const Index = () => {
                       ))}
                     </div>
                     <p className="text-muted-foreground font-body text-sm leading-relaxed mb-3">
-                      \"{t.text}\"
+                      &ldquo;{t.text}&rdquo;
                     </p>
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center font-display text-xs font-bold text-primary">
