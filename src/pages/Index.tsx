@@ -195,7 +195,7 @@ const Index = () => {
                 {[
                   "Trained and vetted cleaning professionals",
                   "Eco-friendly cleaning products used",
-                  "Flexible scheduling \\u2014 we work around you",
+                  "Flexible scheduling, we work around you",
                   "100% satisfaction guarantee on every job",
                   "Serving homes and offices across Ibadan",
                 ].map((item) => (
