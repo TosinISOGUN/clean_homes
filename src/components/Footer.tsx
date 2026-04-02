@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { Sparkles, MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 import { CONTACT_EMAIL, CONTACT_PHONE_DISPLAY, WHATSAPP_LINK, WORKING_HOURS_WEEKDAYS, WORKING_HOURS_SATURDAY } from "@/lib/constants";
+import logo from "@/assets/logo_clean_homes.png";
 
 const Footer = () => {
   return (
@@ -9,13 +10,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <Sparkles className="w-6 h-6 text-accent" />
-              <span className="font-display text-xl font-bold">
-                Gleam<span className="text-accent">.</span>
-              </span>
+              <img
+                src={logo}
+                alt="Clean Homes Logo"
+                className="h-16 w-auto brightness-0 invert"
+              />
             </Link>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
-              Professional cleaning services in Ibadan, Oyo State. Making your spaces sparkle since day one.
+              Professional cleaning services in Ibadan, Oyo State. Bringing peace & freshness to your space since day one.
             </p>
           </div>
 
@@ -55,7 +57,7 @@ const Footer = () => {
                 <MapPin className="w-4 h-4 mt-0.5 text-accent shrink-0" />
                 <span>Ibadan, Oyo State, Nigeria</span>
               </div>
-              <a 
+              <a
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -64,7 +66,7 @@ const Footer = () => {
                 <Phone className="w-4 h-4 text-accent shrink-0" />
                 <span>{CONTACT_PHONE_DISPLAY}</span>
               </a>
-              <a 
+              <a
                 href={`mailto:${CONTACT_EMAIL}`}
                 className="flex items-center gap-2 text-sm text-primary-foreground/70 hover:text-accent transition-colors"
               >
@@ -84,7 +86,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/10 mt-12 pt-8 text-center">
           <p className="text-primary-foreground/50 text-sm">
-            © {new Date().getFullYear()} Gleam Cleaning Co. All rights reserved.
+            © {new Date().getFullYear()} Clean Homes Cleaning Co. All rights reserved.
           </p>
         </div>
       </div>

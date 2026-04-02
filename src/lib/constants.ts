@@ -20,5 +20,5 @@ export const SERVICE_AREAS = [
   "New Bodija",
 ];
 
-const WHATSAPP_MESSAGE = encodeURIComponent("Hello Gleam, I'd like to book a cleaning session for my space.");
+const WHATSAPP_MESSAGE = encodeURIComponent("Hello Clean Homes, I'd like to book a cleaning session for my space.");
 export const WHATSAPP_LINK = `https://wa.me/${CONTACT_PHONE.replace("+", "")}?text=${WHATSAPP_MESSAGE}`;

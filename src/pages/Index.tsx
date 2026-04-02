@@ -35,7 +35,7 @@ const services = [
 const testimonials = [
   {
     name: "Adunola F.",
-    text: "Gleam transformed my apartment! Every surface was spotless. I've never felt more comfortable in my own home.",
+    text: "Clean Homes transformed my apartment! Every surface was spotless. I've never felt more comfortable in my own home.",
     rating: 5,
   },
   {
@@ -45,7 +45,7 @@ const testimonials = [
   },
   {
     name: "Blessing A.",
-    text: "I use Gleam for my deep cleaning every month. Consistent quality every single time. Wonderful service!",
+    text: "I use Clean Homes for my deep cleaning every month. Consistent quality every single time. Wonderful service!",
     rating: 5,
   },
 ];
@@ -77,13 +77,13 @@ const Index = () => {
                 Ibadan's Trusted Cleaners
               </span>
             </div>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">
-              Spaces That
+            <h1 className="font-display text-4xl md:text-5xl lg:text-5xl font-bold text-primary-foreground leading-tight mb-6">
+              Bringing peace &
               <br />
-              <span className="text-accent">Sparkle</span> &amp; Shine
+              <span className="text-accent">freshness</span> to your space
             </h1>
             <p className="text-primary-foreground/80 text-lg md:text-xl font-body leading-relaxed mb-8 max-w-lg">
-              Professional home and office cleaning services in Ibadan, Oyo State. We bring the gleam to every corner.
+              Professional home and office cleaning services in Ibadan, Oyo State. We bring freshness and comfort to every corner.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -186,7 +186,7 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection>
               <span className="text-primary font-body font-semibold text-sm tracking-wider uppercase">
-                Why Gleam
+                Why Clean Homes
               </span>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-3 mb-8">
                 Why Clients Love Working With Us
@@ -246,7 +246,7 @@ const Index = () => {
               Ready for a Spotless Space?
             </h2>
             <p className="text-primary-foreground/80 font-body text-lg mb-8">
-              Get in touch today and let us bring the sparkle to your home or office.
+              Get in touch today and let us bring peace & freshness to your home or office.
             </p>
             <a
               href={WHATSAPP_LINK}

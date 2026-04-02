@@ -8,7 +8,7 @@ const services = [
   {
     icon: Home,
     title: "Home Cleaning",
-    desc: "Regular or one-time cleaning for your home. We handle kitchens, bathrooms, living rooms, bedrooms — every room gets the Gleam treatment.",
+    desc: "Regular or one-time cleaning for your home. We handle kitchens, bathrooms, living rooms, bedrooms — every room gets the Clean Homes touch.",
     features: ["Dusting & wiping all surfaces", "Floor mopping & vacuuming", "Kitchen & bathroom sanitization", "Bed making & room tidying"],
   },
   {

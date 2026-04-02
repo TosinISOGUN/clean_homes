@@ -1,6 +1,6 @@
-# Gleam - Professional Cleaning Services in Ibadan
+# Clean Homes - Professional Cleaning Services in Ibadan
 
-Gleam (Gleam Cleaning Co.) is a premium cleaning service provider based in Ibadan, Oyo State, Nigeria. We specialize in bringing a professional touch to homes and offices, ensuring every space we touch sparkles and shines!
+Clean Homes (Clean Homes Cleaning Co.) is a premium cleaning service provider based in Ibadan, Oyo State, Nigeria. We specialize in bringing peace & freshness to your space, ensuring every home and office we touch radiates comfort and cleanliness!
 
 ## 🌟 Key Features
 
@@ -33,7 +33,7 @@ This project is built with a modern, performant web stack:
 1. **Clone the repository**:
    ```sh
    git clone <repository-url>
-   cd gleam
+   cd clean-homes
    ```
 
 2. **Install dependencies**:
@@ -62,4 +62,4 @@ This project is built with a modern, performant web stack:
 
 ## 📄 License
 
-This project is private and intended for Gleam Cleaning Co. operations.
+This project is private and intended for Clean Homes Cleaning Co. operations.

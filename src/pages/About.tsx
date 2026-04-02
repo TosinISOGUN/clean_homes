@@ -23,10 +23,10 @@ const About = () => {
                 About Us
               </span>
               <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mt-3 mb-6">
-                The Story Behind the <span className="text-primary">Sparkle</span>
+                The Story Behind the <span className="text-secondary-foreground">Freshness</span>
               </h1>
               <p className="text-muted-foreground font-body text-lg leading-relaxed">
-                Gleam Cleaning Co. was founded with a simple belief — everyone deserves a clean, healthy space. Based in Ibadan, Oyo State, we've been helping homes and offices shine since our founding.
+                Clean Homes Cleaning Co. was founded with a simple belief — everyone deserves a clean, healthy, and peaceful space. Based in Ibadan, Oyo State, we've been helping homes and offices find their freshness since our founding.
               </p>
             </div>
           </AnimatedSection>
@@ -40,7 +40,7 @@ const About = () => {
             <AnimatedSection>
               <img
                 src={aboutImage}
-                alt="Gleam cleaning team"
+                alt="Clean Homes cleaning team"
                 className="rounded-2xl shadow-lg w-full h-auto object-cover"
               />
             </AnimatedSection>

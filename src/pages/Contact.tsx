@@ -33,7 +33,7 @@ const Contact = () => {
                 Contact Us
               </span>
               <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mt-3 mb-6">
-                Let's Make Your Space <span className="text-primary">Gleam</span>
+                Let's Bring <span className="text-primary">Freshness</span> to Your Space
               </h1>
               <p className="text-muted-foreground font-body text-lg leading-relaxed">
                 Ready to book a cleaning or have questions? Fill out the form below or reach out directly. We'd love to hear from you.
@@ -176,7 +176,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-body font-semibold text-foreground text-sm">WhatsApp</h4>
-                      <a 
+                      <a
                         href={WHATSAPP_LINK}
                         target="_blank"
                         rel="noopener noreferrer"

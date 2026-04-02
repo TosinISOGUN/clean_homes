@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "@/assets/logo_clean_homes.png";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -20,10 +21,11 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <Link to="/" className="flex items-center gap-2 group">
-            <Sparkles className="w-6 h-6 text-primary transition-transform duration-300 group-hover:rotate-12" />
-            <span className="font-display text-xl font-bold text-foreground">
-              Gleam<span className="text-primary">.</span>
-            </span>
+            <img
+              src={logo}
+              alt="Clean Homes Logo"
+              className="h-16 w-auto transition-transform duration-300 group-hover:scale-105"
+            />
           </Link>
 
           {/* Desktop */}
@@ -32,11 +34,10 @@ const Navbar = () => {
               <Link
                 key={link.to}
                 to={link.to}
-                className={`text-sm font-medium transition-colors duration-200 hover:text-primary ${
-                  location.pathname === link.to
-                    ? "text-primary"
-                    : "text-muted-foreground"
-                }`}
+                className={`text-sm font-medium transition-colors duration-200 hover:text-primary ${location.pathname === link.to
+                  ? "text-primary"
+                  : "text-muted-foreground"
+                  }`}
               >
                 {link.label}
               </Link>
@@ -74,11 +75,10 @@ const Navbar = () => {
                   key={link.to}
                   to={link.to}
                   onClick={() => setIsOpen(false)}
-                  className={`text-base font-medium transition-colors ${
-                    location.pathname === link.to
-                      ? "text-primary"
-                      : "text-muted-foreground"
-                  }`}
+                  className={`text-base font-medium transition-colors ${location.pathname === link.to
+                    ? "text-primary"
+                    : "text-muted-foreground"
+                    }`}
                 >
                   {link.label}
                 </Link>
